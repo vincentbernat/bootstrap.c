@@ -1,0 +1,63 @@
+.\" Copyright (c) 2013 Vincent Bernat <vincent.bernat@dailymotion.com>
+.\"
+.\" Permission to use, copy, modify, and/or distribute this software for any
+.\" purpose with or without fee is hereby granted, provided that the above
+.\" copyright notice and this permission notice appear in all copies.
+.\"
+.\" THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+.\" WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+.\" ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+.\" WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+.\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+.\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+.\"
+.\" TODO:40001 A manual page will help your users to find how to use
+.\" TODO:40002 your program. Keep it up-to-date.
+.Dd $Mdocdate: February 05 2013 $
+.\" TODO:40011 Use your project name here.
+.Dt BOOTSTRAP 8
+.Os
+.Sh NAME
+.\" TODO:40012 And here. And put a description.
+.Nm bootstrap
+.Nd boilerplate for small C programs with autotools
+.\" TODO:40031 From here, you are on your own. Have a look at this URL
+.\" TODO:40032 for more information about the markup language used:
+.\" TODO:40033  http://www.openbsd.org/cgi-bin/man.cgi?query=mdoc&sektion=7
+.Sh SYNOPSIS
+.Nm
+.Op Fl dv
+.Op Fl D Ar debug
+.Op ...
+.Sh DESCRIPTION
+.Nm
+is a wonderful program which currently does nothing. But we aim for
+progress.
+.Pp
+The options are as follows:
+.Bl -tag -width Ds
+.It Fl d
+Be more verbose. This option can be repeated twice to enable debug
+mode. Debug messages can then be filtered with
+.Fl D
+flag.
+.It Fl D Ar debug
+This option allows the user to filter out debugging information by
+specifying allowed tokens. This option can be repeated several times
+to allow several tokens. This option must be combined with the
+.Fl d
+flag to have some effect. Only debugging logs can be filtered.
+.El
+.Nm
+expects to be called with a namespace. Namespaces allow a user to use
+.Nm
+for several different usages. After a namespace, a command is
+expected. Each command has its own set of options described below.
+.\" TODO:40021 Also update this section.
+.Sh AUTHORS
+.An -nosplit
+The
+.Nm
+program was written by
+.An Vincent Bernat Aq vincent.bernat@dailymotion.com .
