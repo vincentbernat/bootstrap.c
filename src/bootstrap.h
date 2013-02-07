@@ -26,9 +26,9 @@
 
 #include <stdlib.h>
 
-/* TODO:50011 Declare here functions that you will use in several files. Those
- * TODO:50012 functions should not be prefixed with `static` keyword. All other
- * TODO:50013 functions should.
+/* TODO:5001 Declare here functions that you will use in several files. Those
+ * TODO:5001 functions should not be prefixed with `static` keyword. All other
+ * TODO:5001 functions should.
  */
 
 #endif

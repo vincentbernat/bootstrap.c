@@ -16,8 +16,9 @@ following command to extract the next steps:
     ::sh
     git ls-tree -r --name-only HEAD | \
           xargs grep -nH "T[O]DO:" | \
-          sed 's/\([^:]*:[^:]*\):\(.*\)TODO\(.*\)/\3 (\1)/' | \
-          sort -n
+          sed 's/\([^:]*:[^:]*\):\(.*\)T[O]DO:\(.*\)/\3 (\1)/' | \
+          sort -ns | \
+          awk '(last != $1) {print ""} {last=$1 ; print}'
 
 Once you are done, your project is ready and you can compile it with
 and get a release tarball with:

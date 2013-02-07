@@ -1,6 +1,6 @@
 /* -*- mode: c; c-file-style: "openbsd" -*- */
-/* TODO:50021 You may want to change the copyright of all files. This is the
- * TODO:50022 ISC license. Choose another one if you want.
+/* TODO:5002 You may want to change the copyright of all files. This is the
+ * TODO:5002 ISC license. Choose another one if you want.
  */
 /*
  * Copyright (c) 2013 Vincent Bernat <vincent.bernat@dailymotion.com>
@@ -18,7 +18,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-/* TODO:10031 Change `bootstrap.h` below with the appropriate file name */
+/* TODO:1003 Change `bootstrap.h` below with the appropriate file name */
 #include "bootstrap.h"
 
 #include <stdio.h>
@@ -31,8 +31,8 @@ extern const char *__progname;
 static void
 usage(void)
 {
-	/* TODO:30021 Don't forget to update the usage block with the most
-	 * TODO:30022 important options. */
+	/* TODO:3002 Don't forget to update the usage block with the most
+	 * TODO:3002 important options. */
 	fprintf(stderr, "Usage: %s [OPTIONS]\n",
 		__progname);
 	fprintf(stderr, "Version: %s\n", PACKAGE_STRING);
@@ -48,7 +48,7 @@ main(int argc, char * const argv[])
 	int debug = 1;
 	int ch;
 
-	/* TODO:30011 If you want to add more options, add them here. */
+	/* TODO:3001 If you want to add more options, add them here. */
 
 	while ((ch = getopt(argc, argv, "hvdD:")) != -1) {
 		switch (ch) {
@@ -74,8 +74,8 @@ main(int argc, char * const argv[])
 
 	log_init(debug, __progname);
 
-	/* TODO:30001 It's time for you program to do something. Add anything
-	 * TODO:30002 you want here. */
+	/* TODO:3000 It's time for you program to do something. Add anything
+	 * TODO:3000 you want here. */
 	log_info("main", "hello world!");
 	log_warnx("main", "your program does nothing");
 }

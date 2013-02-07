@@ -1,9 +1,9 @@
 #                                               -*- Autoconf -*-
 AC_PREREQ([2.64])
 
-## TODO:10001 You need a name for your project. Replace `bootstrap`
-## TODO:10002 by the name of your project. Also put your email
-## TODO:10003 address.
+## TODO:1000 You need a name for your project. Replace `bootstrap`
+## TODO:1000 by the name of your project. Also put your email
+## TODO:1000 address.
 
 AC_INIT([bootstrap],
         [m4_esyscmd_s([git describe --tags --always 2> /dev/null || date +%F])],
@@ -52,9 +52,9 @@ AX_LDFLAGS_OPTION([-Wl,-z,now])
 
 AC_CACHE_SAVE
 
-## TODO:20031 Add the dependencies of your project here.
-## TODO:20032 The use of "Jansson" here is an example, you don't have
-## TODO:20033 to keep it.
+## TODO:2003 Add the dependencies of your project here.
+## TODO:2003 The use of "Jansson" here is an example, you don't have
+## TODO:2003 to keep it.
 
 PKG_CHECK_MODULES([JANSSON], [jansson >= 2])
 
