@@ -13,7 +13,6 @@ Usage
 Clone this repository to the directory of your choice. Then, use the
 following command to extract the next steps:
 
-    ::sh
     git ls-tree -r --name-only HEAD | \
           xargs grep -nH "T[O]DO:" | \
           sed 's/\([^:]*:[^:]*\):\(.*\)T[O]DO:\(.*\)/\3 (\1)/' | \
@@ -23,7 +22,6 @@ following command to extract the next steps:
 Once you are done, your project is ready and you can compile it with
 and get a release tarball with:
 
-    ::sh
     ./autogen.sh
     mkdir build
     cd build
