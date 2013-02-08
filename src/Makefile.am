@@ -13,7 +13,7 @@ dist_man_MANS = bootstrap.8
 
 bootstrap_SOURCES  = log.c log.h bootstrap.h bootstrap.c
 bootstrap_CFLAGS   = @JANSSON_CFLAGS@
-bootstrap_LIBS     = @JANSSON_LIBS@
+bootstrap_LDFLAGS  = @JANSSON_LIBS@
 
 ## TODO:2004 Each time you have used `PKG_CHECK_MODULES` macro
 ## TODO:2004 in `configure.ac`, you get two variables that
