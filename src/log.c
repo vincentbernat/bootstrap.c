@@ -32,7 +32,8 @@
 static int	 debug = 1;
 
 /* Logging can be modified by providing an appropriate log handler. */
-static void (*logh)(int severity, const char *msg) = NULL;
+static void (*logh)(int severity, const char *msg, void *) = NULL;
+static void *logh_arg = NULL;
 
 static void	 vlog(int, const char *, const char *, va_list);
 static void	 logit(int, const char *, const char *, ...);
@@ -52,9 +53,10 @@ log_init(int n_debug, const char *progname)
 }
 
 void
-log_register(void (*cb)(int, const char*))
+log_register(void (*cb)(int, const char*, void*), void *arg)
 {
 	logh = cb;
+	logh_arg = arg;
 }
 
 void
@@ -130,7 +132,7 @@ vlog(int pri, const char *token, const char *fmt, va_list ap)
 	if (logh) {
 		char *result;
 		if (vasprintf(&result, fmt, ap) != -1) {
-			logh(pri, result);
+			logh(pri, result, logh_arg);
 			return;
 		}
 		/* Otherwise, fallback to output on stderr. */
