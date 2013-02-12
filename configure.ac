@@ -6,7 +6,7 @@ AC_PREREQ([2.64])
 ## TODO:1000 address.
 
 AC_INIT([bootstrap],
-        [m4_esyscmd_s([git describe --tags --always --match '[0-9]*' 2> /dev/null || date +%F])],
+        [m4_esyscmd_s([git describe --tags --always --match [0-9]* 2> /dev/null || date +%F])],
         [bernat@luffy.cx])
 AC_CONFIG_SRCDIR([src/log.c])
 AC_CONFIG_HEADER([config.h])
