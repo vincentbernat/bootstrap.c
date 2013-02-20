@@ -1,12 +1,13 @@
 ACLOCAL_AMFLAGS = -I m4
 
-SUBDIRS      = src
-
-dist_doc_DATA = README.md ChangeLog
+SUBDIRS        = src
+EXTRA_DIST     = get-version autogen.sh
+DISTCLEANFILES = ChangeLog
+dist_doc_DATA  = README.md
 
 # Build changelog from git history
-dist-hook: $(distdir)/ChangeLog
-$(distdir)/ChangeLog:
+.PHONY: $(distdir)/ChangeLog
+ChangeLog:
 	$(AM_V_GEN)if test -d $(top_srcdir)/.git; then \
 		prev=$$(git describe --tags --always --match '[0-9]*' 2> /dev/null) ; \
 		for tag in $$(git tag | grep -E '^[0-9]+(\.[0-9]+){1,}$$' | sort -rn); do \
@@ -21,7 +22,6 @@ $(distdir)/ChangeLog:
 	else \
 		touch $@ ; \
 	fi
-ChangeLog:
-	touch $@
 
-.PHONY: $(distdir)/ChangeLog
+dist-hook:
+	echo $(VERSION) > $(distdir)/.dist-version
