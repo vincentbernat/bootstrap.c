@@ -31,6 +31,7 @@ AC_PROG_CXX
 AM_PROG_CC_C_O
 AC_PROG_LIBTOOL
 AC_PROG_LN_S
+AC_PROG_EGREP
 
 # Check some compiler flags
 AX_CFLAGS_GCC_OPTION([-fdiagnostics-show-option])
