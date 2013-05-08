@@ -7,7 +7,7 @@ dist_doc_DATA  = README.md
 doc_DATA       = ChangeLog
 
 # Build changelog from git history
-.PHONY: $(distdir)/ChangeLog
+.PHONY: ChangeLog
 ChangeLog:
 	$(AM_V_GEN)if test -d $(top_srcdir)/.git; then \
 		prev=$$(git describe --tags --always --match '[0-9]*' 2> /dev/null) ; \
