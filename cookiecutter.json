@@ -1,6 +1,7 @@
 {
     "full_name": "Vincent Bernat",
     "email": "bernat@luffy.cx",
+    "repo_name": "bootstrap",
     "project_name": "bootstrap",
     "project_description": "boilerplate for small C programs with autotools"
 }
