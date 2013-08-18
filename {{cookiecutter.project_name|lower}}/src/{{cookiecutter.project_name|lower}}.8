@@ -1,4 +1,4 @@
-.\" Copyright (c) 2013 Vincent Bernat <vincent.bernat@dailymotion.com>
+.\" Copyright (c) 2013 {{cookiecutter.full_name}} <{{cookiecutter.email}}>
 .\"
 .\" Permission to use, copy, modify, and/or distribute this software for any
 .\" purpose with or without fee is hereby granted, provided that the above
@@ -12,18 +12,16 @@
 .\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 .\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 .\"
-.\" TODO:4000 A manual page will help your users to find how to use
-.\" TODO:4000 your program. Keep it up-to-date.
 .Dd $Mdocdate: February 05 2013 $
-.\" TODO:4001 Use your project name here.
-.Dt BOOTSTRAP 8
+.Dt {{cookiecutter.project_name|upper}} 8
 .Os
 .Sh NAME
-.\" TODO:4001 And here. And put a description.
-.Nm bootstrap
-.Nd boilerplate for small C programs with autotools
-.\" TODO:4003 From here, you are on your own. Have a look at this URL
-.\" TODO:4003 for more information about the markup language used:
+.Nm {{cookiecutter.project_name}}
+.Nd {{cookiecutter.project_description}}
+.\" TODO:4003 A manual page will help your users to find how to use
+.\" TODO:4003 your program. Keep it up-to-date.
+.\" TODO:4003 Have a look at this URL for more information about the
+.\" TODO:4003 markup language used:
 .\" TODO:4003  http://www.openbsd.org/cgi-bin/man.cgi?query=mdoc&sektion=7
 .Sh SYNOPSIS
 .Nm
@@ -49,10 +47,9 @@ to allow several tokens. This option must be combined with the
 .Fl d
 flag to have some effect. Only debugging logs can be filtered.
 .El
-.\" TODO:4002 Also update this section.
 .Sh AUTHORS
 .An -nosplit
 The
 .Nm
 program was written by
-.An Vincent Bernat Aq vincent.bernat@dailymotion.com .
+.An {{cookiecutter.full_name}} Aq {{cookiecutter.email}} .

@@ -10,8 +10,18 @@ projects like [HTML5 Boilerplate][]?
 Usage
 -----
 
-Clone this repository to the directory of your choice. Then, use the
-following command to extract the next steps:
+You need [cookiecutter][], a tool to create projects from project
+templates. Once installed, you can use the following command:
+
+    cookiecutter https://github.com/vincentbernat/bootstrap.c.git
+    cd your-project
+    git init
+    git add .
+    git commit -m "Initial commit"
+
+[cookiecutter]: https://github.com/audreyr/cookiecutter
+
+Then, use the following command to get the first steps to get started:
 
     git ls-tree -r --name-only HEAD | \
           xargs grep -nH "T[O]DO:" | \
@@ -22,14 +32,12 @@ following command to extract the next steps:
 Once you are done, your project is ready and you can compile it with
 and get a release tarball with:
 
-    ./autogen.sh
+    sh autogen.sh
     mkdir build
     cd build
     ../configure
     make
     make dist
-
-Also, don't forget to replace this `README.md` file!
 
 Once you want to make a release, tag the tree with `git tag 1.3`, then
 run the previous commands from the top. You'll get a properly

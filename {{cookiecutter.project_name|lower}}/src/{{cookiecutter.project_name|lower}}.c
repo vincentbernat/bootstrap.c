@@ -3,7 +3,7 @@
  * TODO:5002 ISC license. Choose another one if you want.
  */
 /*
- * Copyright (c) 2013 Vincent Bernat <vincent.bernat@dailymotion.com>
+ * Copyright (c) 2013 {{cookiecutter.full_name}} <{{cookiecutter.email}}>
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
@@ -18,8 +18,7 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-/* TODO:1003 Change `bootstrap.h` below with the appropriate file name */
-#include "bootstrap.h"
+#include "{{cookiecutter.project_name}}.h"
 
 #include <stdio.h>
 #include <unistd.h>

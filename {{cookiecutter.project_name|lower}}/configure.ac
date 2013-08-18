@@ -1,13 +1,9 @@
 #                                               -*- Autoconf -*-
 AC_PREREQ([2.64])
 
-## TODO:1000 You need a name for your project. Replace `bootstrap`
-## TODO:1000 by the name of your project. Also put your email
-## TODO:1000 address.
-
-AC_INIT([bootstrap],
+AC_INIT([{{cookiecutter.project_name}}],
         [m4_esyscmd_s([./get-version])],
-        [bernat@luffy.cx])
+        [{{cookiecutter.email}}])
 AC_CONFIG_SRCDIR([src/log.c])
 AC_CONFIG_HEADER([config.h])
 AC_CONFIG_FILES([Makefile src/Makefile])
