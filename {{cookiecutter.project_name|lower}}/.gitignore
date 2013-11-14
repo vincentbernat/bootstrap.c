@@ -25,5 +25,9 @@
 /ar-lib
 Makefile.in
 
-# cscope
+# cscope and other tags
 /cscope.*
+/GPATH
+/GRTAGS
+/GSYMS
+/GTAGS
