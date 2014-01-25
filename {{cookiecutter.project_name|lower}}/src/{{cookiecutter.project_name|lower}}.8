@@ -12,7 +12,7 @@
 .\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 .\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 .\"
-.Dd $Mdocdate: February 05 2013 $
+.Dd February 05, 2013
 .Dt {{cookiecutter.project_name|upper}} 8
 .Os
 .Sh NAME
@@ -27,25 +27,28 @@
 .Nm
 .Op Fl dv
 .Op Fl D Ar debug
-.Op ...
+.Op Ar ...
 .Sh DESCRIPTION
 .Nm
-is a wonderful program which currently does nothing. But we aim for
-progress.
+is a wonderful program which currently does nothing.
+But we aim for progress.
 .Pp
 The options are as follows:
 .Bl -tag -width Ds
 .It Fl d
-Be more verbose. This option can be repeated twice to enable debug
-mode. Debug messages can then be filtered with
+Be more verbose.
+This option can be repeated twice to enable debug mode.
+Debug messages can then be filtered with the
 .Fl D
 flag.
 .It Fl D Ar debug
 This option allows the user to filter out debugging information by
-specifying allowed tokens. This option can be repeated several times
-to allow several tokens. This option must be combined with the
+specifying allowed tokens.
+This option can be repeated several times to allow several tokens.
+This option must be combined with the
 .Fl d
-flag to have some effect. Only debugging logs can be filtered.
+flag to have some effect.
+Only debugging logs can be filtered.
 .El
 .Sh AUTHORS
 .An -nosplit
