@@ -3,7 +3,7 @@
  * TODO:5002 ISC license. Choose another one if you want.
  */
 /*
- * Copyright (c) 2013 {{cookiecutter.full_name}} <{{cookiecutter.email}}>
+ * Copyright (c) 2014 {{cookiecutter.full_name}} <{{cookiecutter.email}}>
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above

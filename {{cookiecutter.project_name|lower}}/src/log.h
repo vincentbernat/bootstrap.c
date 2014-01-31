@@ -1,6 +1,6 @@
 /* -*- mode: c; c-file-style: "openbsd" -*- */
 /*
- * Copyright (c) 2013 Vincent Bernat <bernat@luffy.cx>
+ * Copyright (c) 2014 Vincent Bernat <bernat@luffy.cx>
  *
  * Permission to use, copy, modify, and/or distribute this software for any
  * purpose with or without fee is hereby granted, provided that the above
