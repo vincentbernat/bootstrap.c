@@ -33,6 +33,9 @@ main(int argc, char *argv[])
 	int exitcode = EXIT_FAILURE;
 
 	/* TODO:3001 If you want to add more options, add them here. */
+	/* TODO:3001 If you don't want to use libargtable2, you can replace */
+	/* TODO:3001 this code by `getopt()`. See the following URL: */
+	/* TODO:3001   https://github.com/vincentbernat/bootstrap.c/blob/master/%7B%7Bcookiecutter.project_name%7Clower%7D%7D/src/%7B%7Bcookiecutter.project_name%7Clower%7D%7D.c */
 	struct arg_end *arg_fini    = arg_end(5);
 	struct arg_lit *arg_debug   = arg_litn("d", "debug", 0, 3, "be more verbose");
 	struct arg_lit *arg_help    = arg_lit0("h", "help", "display help and exit");
