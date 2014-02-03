@@ -25,7 +25,8 @@
 .\" TODO:4003  http://www.openbsd.org/cgi-bin/man.cgi?query=mdoc&sektion=7
 .Sh SYNOPSIS
 .Nm
-.Op Fl dv
+.Op Fl d | Fl -debug
+.Op Fl v | Fl -version
 .Op Fl D Ar debug
 .Op Ar ...
 .Sh DESCRIPTION
@@ -35,7 +36,7 @@ But we aim for progress.
 .Pp
 The options are as follows:
 .Bl -tag -width Ds
-.It Fl d
+.It Fl d | Fl -debug
 Be more verbose.
 This option can be repeated twice to enable debug mode.
 Debug messages can then be filtered with the
