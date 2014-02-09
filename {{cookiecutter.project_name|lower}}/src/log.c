@@ -195,6 +195,16 @@ log_warnx(const char *token, const char *emsg, ...)
 }
 
 void
+log_crit(const char *token, const char *emsg, ...)
+{
+	va_list  ap;
+
+	va_start(ap, emsg);
+	vlog(LOG_CRIT, token, emsg, ap);
+	va_end(ap);
+}
+
+void
 log_info(const char *token, const char *emsg, ...)
 {
 	va_list	 ap;
