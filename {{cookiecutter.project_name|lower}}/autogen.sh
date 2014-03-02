@@ -11,7 +11,14 @@ chmod +x ./get-version
     git submodule update
 }
 
-LIBTOOLIZE=${LIBTOOLIZE:-libtoolize}
+case "$(uname)" in
+    Darwin)
+        LIBTOOLIZE=${LIBTOOLIZE:-glibtoolize}
+        ;;
+    *)
+        LIBTOOLIZE=${LIBTOOLIZE:-libtoolize}
+        ;;
+esac
 AUTORECONF=${AUTORECONF:-autoreconf}
 ACLOCAL=${ACLOCAL:-aclocal}
 AUTOCONF=${AUTOCONF:-autoconf}
