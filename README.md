@@ -7,6 +7,12 @@ projects like [HTML5 Boilerplate][]?
 
 [HTML5 Boilerplate]: http://html5boilerplate.com/
 
+There is a [more complete alternative][] if you want to get an embedded
+web server with exposed REST/WS/SSE endpoints as well as a client-side
+JS app.
+
+[more complete alternative]: https://github.com/vincentbernat/bootstrap.c-web
+
 Usage
 -----
 
