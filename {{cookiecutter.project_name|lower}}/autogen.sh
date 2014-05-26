@@ -5,7 +5,7 @@ set -e
 chmod +x $0
 chmod +x ./get-version
 
-[ ! -d .gitmodules ] || {
+[ ! -f .gitmodules ] || {
     echo "autogen.sh: updating git submodules"
     git submodule init
     git submodule update
