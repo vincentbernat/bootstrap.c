@@ -17,9 +17,6 @@
  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  */
 
-#ifndef _GNU_SOURCE
-# define _GNU_SOURCE
-#endif
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>

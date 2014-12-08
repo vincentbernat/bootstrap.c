@@ -47,6 +47,19 @@ AX_CFLAGS_GCC_OPTION([-Wno-missing-field-initializers])
 AX_LDFLAGS_OPTION([-Wl,-z,relro])
 AX_LDFLAGS_OPTION([-Wl,-z,now])
 
+dnl Enable _GNU_SOURCE and the like
+AX_CFLAGS_GCC_OPTION([-D_GNU_SOURCE])    dnl GNU systems (asprintf, ...)
+case $host_os in
+   solaris*)
+     AX_CFLAGS_GCC_OPTION([-D__EXTENSIONS__]) dnl (CMSG_*)
+     AX_CFLAGS_GCC_OPTION([-D_XPG4_2])        dnl (CMSG_*)
+     ;;
+   hpux*)
+     AX_CFLAGS_GCC_OPTION([-D_XOPEN_SOURCE=500])      dnl HP-UX
+     AX_CFLAGS_GCC_OPTION([-D_XOPEN_SOURCE_EXTENDED]) dnl HP-UX
+     ;;
+esac
+
 AC_CACHE_SAVE
 
 ## TODO:2003 Add the dependencies of your project here.
