@@ -2,7 +2,7 @@ language: python
 python: 2.7
 install:
   - sudo apt-get install build-essential autoconf automake libtool libjansson-dev
-  - pip install cookiecutter
+  - sudo pip install cookiecutter
 script:
   - CURDIR=$PWD && cd /tmp && cookiecutter --no-input $CURDIR
   - cd /tmp/bootstrap && ./autogen.sh && ./configure
