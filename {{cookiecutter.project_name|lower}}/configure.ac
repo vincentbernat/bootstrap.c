@@ -66,7 +66,7 @@ AC_CACHE_SAVE
 ## TODO:2003 The use of "jansson" here is not mandatory. You don't have
 ## TODO:2003 to keep it.
 
-PKG_CHECK_MODULES([JANSSON], [jansson >= 2.4])
+PKG_CHECK_MODULES([JANSSON], [jansson >= 2.1])
 
 AC_CACHE_SAVE
 
