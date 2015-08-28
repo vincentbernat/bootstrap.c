@@ -23,6 +23,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
+#include <getopt.h>
 
 extern const char *__progname;
 
@@ -35,7 +36,9 @@ usage(void)
 	    __progname);
 	fprintf(stderr, "Version: %s\n", PACKAGE_STRING);
 	fprintf(stderr, "\n");
-	fprintf(stderr, "-d      Be more verbose.\n");
+	fprintf(stderr, " -d, --debug        be more verbose.\n");
+	fprintf(stderr, " -h, --help         display help and exit\n");
+	fprintf(stderr, " -v, --version      print version and exit\n");
 	fprintf(stderr, "\n");
 	fprintf(stderr, "see manual page " PACKAGE "(8) for more information\n");
 }
@@ -47,8 +50,17 @@ main(int argc, char *argv[])
 	int ch;
 
 	/* TODO:3001 If you want to add more options, add them here. */
-
-	while ((ch = getopt(argc, argv, "hvdD:")) != -1) {
+	static struct option long_options[] = {
+                { "debug", no_argument, 0, 'd' },
+                { "help",  no_argument, 0, 'h' },
+                { "version", no_argument, 0, 'v' },
+		{ 0 }
+	};
+	while (1) {
+		int option_index = 0;
+		ch = getopt_long(argc, argv, "hvdD:",
+		    long_options, &option_index);
+		if (ch == -1) break;
 		switch (ch) {
 		case 'h':
 			usage();
@@ -65,6 +77,7 @@ main(int argc, char *argv[])
 			log_accept(optarg);
 			break;
 		default:
+			fprintf(stderr, "unknown option `%c'\n", ch);
 			usage();
 			exit(1);
 		}
