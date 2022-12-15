@@ -1,0 +1,24 @@
+name: CI
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: 0 15 3 * *
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: sudo apt install build-essential autoconf automake libtool libtool-bin libjansson-dev
+      - name: Build
+        run: |
+          CURDIR=$PWD
+          cd /tmp
+          cookiecutter --no-input $CURDIR
+          cd bootstrap
+          ./autogen.sh
+          ./configure
+          make
+          libtool execute src/bootstrap
+          make distcheck
