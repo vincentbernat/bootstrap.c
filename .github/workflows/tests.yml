@@ -10,7 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install dependencies
-        run: sudo apt install build-essential autoconf automake libtool libtool-bin libjansson-dev
+        run: |
+          sudo apt install build-essential autoconf automake libtool libtool-bin libjansson-dev
+          pip install cookiecutter
       - name: Build
         run: |
           CURDIR=$PWD
